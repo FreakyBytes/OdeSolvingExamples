@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage{german}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{array,ragged2e}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+
+%Umlaute für Listings definieren
+\lstset{
+  literate= {Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}2 {ü}{{\"u}}1
+ {ä}{{\"a}}1 {ö}{{\"o}}1
+ }
+
+% Dokument
+
+\title{Mathe Hausaufgaben - Serie 13}
+
+\author{Martin Peters (212206972)}
+\date{09. Juli 2013}
+
+\begin{document}
+	\maketitle
+	
+	Die gegebenen Werte wurde mit Hilfe eines selbst geschriebenen Java-Programms berechnet. Der Sourcecode ist unter \href{https://github.com/FreakyBytes/OdeSolvingExamples}{https://github.com/FreakyBytes/OdeSolvingExamples} frei einsehbar. Fehler durch unzureichende Genauigkeit des benutzten Variablentypes (8 byte floating point value) sind möglich.	\\ \\
+	
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\(i\) & \(x_i\) & \(y_i\) Eulerpolygonzug & \(\tilde{y_i}\) & \(y_i\) Euler-Heun & \(y_i\) Range-Kutta \\
+		\hline 
+		0  & \(1.0\) & \(0.000000\) & \(0.300000\) & \(0.000000\) & \(0.000000\) \\ \hline
+		1  & \(1.1\) & \(0.300000\) & \(0.523140\) & \(0.272727\) & \(0.273552\) \\ \hline
+		2  & \(1.2\) & \(0.545455\) & \(0.720282\) & \(0.504339\) & \(0.505553\) \\ \hline
+		3  & \(1.3\) & \(0.754545\) & \(0.898150\) & \(0.706904\) & \(0.708281\) \\ \hline
+		4  & \(1.4\) & \(0.938462\) & \(1.061463\) & \(0.888373\) & \(0.889793\) \\ \hline
+		5  & \(1.5\) & \(1.104396\) & \(1.213600\) & \(1.054154\) & \(1.055553\) \\ \hline
+		6  & \(1.6\) & \(1.257143\) & \(1.357024\) & \(1.208027\) & \(1.209373\) \\ \hline
+		7  & \(1.7\) & \(1.400000\) & \(1.493559\) & \(1.352700\) & \(1.353977\) \\ \hline
+		8  & \(1.8\) & \(1.535294\) & \(1.624582\) & \(1.490154\) & \(1.491356\) \\ \hline
+		9  & \(1.9\) & \(1.664706\) & \(1.751141\) & \(1.621864\) & \(1.622990\) \\ \hline
+		10 & \(2.0\) & \(1.789474\) & \(1.874051\) & \(1.748945\) & \(1.749998\) \\ \hline
+	\end{tabular}
+
+\end{document}
